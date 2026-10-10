@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /customer/
+Disallow: /cart/
+Disallow: /checkout/
+
+Sitemap: https://pandecomputers.co.tz/sitemap.xml

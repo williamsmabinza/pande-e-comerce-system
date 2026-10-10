@@ -1,0 +1,634 @@
+/* ==========================================================================
+   PANDE COMPUTERS - OFFICIAL E-COMMERCE DESIGN SYSTEM
+   Inspiration: eBay Marketplace Usability & Tanzania Tech Retail
+   ========================================================================== */
+
+:root {
+    /* Required Color System */
+    --pc-navy: #173B70;
+    --pc-blue: #2463B4;
+    --pc-deep-navy: #102542;
+    --pc-black: #15191F;
+    --pc-white: #FFFFFF;
+    --pc-gray-bg: #F5F7FA;
+    --pc-border: #E1E6ED;
+    --pc-muted: #64748B;
+    --pc-red: #D62839;
+    --pc-green: #16804A;
+
+    /* Semantic Aliases */
+    --bs-primary: #2463B4;
+    --bs-primary-rgb: 36, 99, 180;
+    --bs-secondary: #64748B;
+    --bs-success: #16804A;
+    --bs-danger: #D62839;
+    --bs-dark: #15191F;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--pc-black);
+    background-color: var(--pc-gray-bg);
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   TYPOGRAPHY & UTILITIES
+   -------------------------------------------------------------------------- */
+.fw-black {
+    font-weight: 900 !important;
+}
+
+.text-navy {
+    color: var(--pc-navy) !important;
+}
+
+.text-deep-navy {
+    color: var(--pc-deep-navy) !important;
+}
+
+.bg-navy {
+    background-color: var(--pc-navy) !important;
+}
+
+.bg-deep-navy {
+    background-color: var(--pc-deep-navy) !important;
+}
+
+.bg-ebay-gray {
+    background-color: var(--pc-gray-bg) !important;
+}
+
+.text-pc-red {
+    color: var(--pc-red) !important;
+}
+
+.bg-pc-red {
+    background-color: var(--pc-red) !important;
+}
+
+.text-pc-green {
+    color: var(--pc-green) !important;
+}
+
+.bg-pc-green {
+    background-color: var(--pc-green) !important;
+}
+
+.border-pc {
+    border-color: var(--pc-border) !important;
+}
+
+/* Custom Buttons */
+.btn-primary {
+    background-color: var(--pc-blue);
+    border-color: var(--pc-blue);
+    color: #ffffff;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--pc-navy);
+    border-color: var(--pc-navy);
+    color: #ffffff;
+}
+
+.btn-navy {
+    background-color: var(--pc-navy);
+    border-color: var(--pc-navy);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.btn-navy:hover {
+    background-color: var(--pc-deep-navy);
+    border-color: var(--pc-deep-navy);
+    color: #ffffff;
+}
+
+.btn-outline-primary {
+    color: var(--pc-blue);
+    border-color: var(--pc-blue);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--pc-blue);
+    border-color: var(--pc-blue);
+    color: #ffffff;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    border-color: #25D366;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+    border-color: #128C7E;
+    color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   EBAY-STYLE HEADER & NAVIGATION
+   -------------------------------------------------------------------------- */
+.top-utility-bar {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--pc-border);
+    font-size: 0.8125rem;
+    color: var(--pc-muted);
+}
+
+.top-utility-bar a {
+    color: var(--pc-muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.top-utility-bar a:hover {
+    color: var(--pc-blue);
+}
+
+.main-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--pc-border);
+    padding: 0.75rem 0;
+}
+
+.header-logo-img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Prominent eBay-Style Search Bar */
+.ebay-search-container {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    border: 2px solid var(--pc-blue);
+    border-radius: 28px;
+    background-color: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(36, 99, 180, 0.08);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.ebay-search-container:focus-within {
+    border-color: var(--pc-navy);
+    box-shadow: 0 0 0 4px rgba(36, 99, 180, 0.15);
+}
+
+.ebay-search-input {
+    border: none;
+    box-shadow: none;
+    padding: 0.65rem 1.25rem;
+    font-size: 0.95rem;
+    color: var(--pc-black);
+    flex-grow: 1;
+    background: transparent;
+}
+
+.ebay-search-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.ebay-category-select {
+    border: none;
+    border-left: 1px solid var(--pc-border);
+    background-color: #f8fafc;
+    color: var(--pc-black);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.4rem 0.85rem;
+    cursor: pointer;
+    max-width: 170px;
+}
+
+.ebay-category-select:focus {
+    outline: none;
+    background-color: #ffffff;
+}
+
+.ebay-search-btn {
+    background-color: var(--pc-blue);
+    color: #ffffff;
+    border: none;
+    padding: 0 1.5rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.ebay-search-btn:hover {
+    background-color: var(--pc-navy);
+}
+
+/* Department Horizontal Navigation Bar */
+.department-nav-bar {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--pc-border);
+    font-size: 0.875rem;
+}
+
+.dept-link {
+    color: var(--pc-black);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.55rem 0.65rem;
+    display: inline-block;
+    white-space: nowrap;
+    transition: color 0.15s ease;
+}
+
+.dept-link:hover, .dept-link.active {
+    color: var(--pc-blue);
+    border-bottom: 2px solid var(--pc-blue);
+    margin-bottom: -1px;
+}
+
+/* --------------------------------------------------------------------------
+   EBAY-STYLE HERO PROMO BANNER (TANZANIAN TECH SHOWROOM)
+   -------------------------------------------------------------------------- */
+.promo-hero-banner {
+    position: relative;
+    background-color: var(--pc-deep-navy);
+    background-image: 
+        linear-gradient(110deg, rgba(8, 15, 29, 0.96) 0%, rgba(13, 27, 42, 0.90) 45%, rgba(13, 27, 42, 0.60) 75%, rgba(13, 27, 42, 0.35) 100%),
+        url('../images/hero-tech-tanzania.svg');
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 14px 40px rgba(10, 25, 47, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.promo-hero-badge {
+    background: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    padding: 0.4rem 0.9rem;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+.hero-feature-pill {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 12px;
+    padding: 0.85rem 1rem;
+    font-size: 0.85rem;
+    color: #e2e8f0;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-feature-pill:hover {
+    background: rgba(255, 255, 255, 0.14);
+    transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   EBAY-STYLE PRODUCT CARD
+   -------------------------------------------------------------------------- */
+.ebay-product-card {
+    background: #ffffff;
+    border: 1px solid var(--pc-border);
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.ebay-product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(16, 37, 66, 0.1);
+    border-color: #cbd5e1;
+}
+
+.font-tabular {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+}
+
+.line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-image-box {
+    height: 190px;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    position: relative;
+    border-bottom: 1px solid #f1f5f9;
+    overflow: hidden;
+}
+
+.product-thumb-img {
+    max-height: 150px;
+    max-width: 88%;
+    object-fit: contain;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ebay-product-card:hover .product-thumb-img {
+    transform: scale(1.08);
+}
+
+.product-discount-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: var(--pc-red);
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+    z-index: 2;
+}
+
+.product-brand-tag {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: #f1f5f9;
+    color: var(--pc-navy);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.45rem;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+.card-content-box {
+    padding: 0.85rem 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-product-title {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--pc-black);
+    text-decoration: none;
+    line-height: 1.35;
+    margin-bottom: 0.4rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: color 0.15s ease;
+}
+
+.card-product-title:hover {
+    color: var(--pc-blue);
+    text-decoration: underline;
+}
+
+.card-price-primary {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--pc-black);
+    line-height: 1.2;
+}
+
+.card-price-old {
+    font-size: 0.8rem;
+    color: var(--pc-muted);
+    text-decoration: line-through;
+    margin-left: 0.4rem;
+}
+
+.stock-indicator {
+    font-size: 0.78rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.stock-in {
+    color: var(--pc-green);
+}
+
+.stock-low {
+    color: var(--pc-red);
+}
+
+/* --------------------------------------------------------------------------
+   EBAY-STYLE CATEGORY TILES
+   -------------------------------------------------------------------------- */
+.category-bubble-card {
+    background: #ffffff;
+    border: 1px solid var(--pc-border);
+    border-radius: 12px;
+    padding: 1rem 0.75rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--pc-black);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.category-bubble-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(16, 37, 66, 0.08);
+    border-color: var(--pc-blue);
+    color: var(--pc-blue);
+}
+
+.category-bubble-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #f1f5f9;
+    color: var(--pc-navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.65rem;
+    font-size: 1.6rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.category-bubble-card:hover .category-bubble-icon {
+    background-color: var(--pc-blue);
+    color: #ffffff;
+}
+
+.category-bubble-title {
+    font-size: 0.825rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 0.2rem;
+}
+
+/* --------------------------------------------------------------------------
+   FLOATING WHATSAPP BUTTON
+   -------------------------------------------------------------------------- */
+.floating-whatsapp-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1050;
+    background-color: #25D366;
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 10px 18px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.floating-whatsapp-btn:hover {
+    background-color: #128C7E;
+    color: #ffffff;
+    transform: translateY(-3px) scale(1.02);
+}
+
+/* --------------------------------------------------------------------------
+   INTERACTIVE CART TOAST & BADGE ANIMATIONS
+   -------------------------------------------------------------------------- */
+.cart-toast-container {
+    position: fixed;
+    bottom: 84px;
+    right: 24px;
+    z-index: 1080;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 380px;
+    width: calc(100vw - 48px);
+    pointer-events: none;
+}
+
+.cart-toast {
+    pointer-events: auto;
+    background: #ffffff;
+    color: var(--pc-black);
+    border-radius: 14px;
+    padding: 1rem 1.15rem;
+    box-shadow: 0 16px 36px rgba(16, 37, 66, 0.22), 0 2px 8px rgba(16, 37, 66, 0.08);
+    border: 1px solid var(--pc-border);
+    animation: toastSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.cart-toast.toast-hiding {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+}
+
+@keyframes toastSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.cart-bump {
+    animation: cartBump 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes cartBump {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.4); }
+    100% { transform: scale(1); }
+}
+
+/* --------------------------------------------------------------------------
+   SITE FOOTER
+   -------------------------------------------------------------------------- */
+.site-footer {
+    background-color: var(--pc-deep-navy);
+    color: #e2e8f0;
+    border-top: 3px solid var(--pc-blue);
+    font-size: 0.875rem;
+}
+
+.site-footer a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.site-footer a:hover {
+    color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE OPTIMIZATIONS
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+    .header-logo-img {
+        height: 38px;
+    }
+    .ebay-category-select {
+        display: none;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .header-logo-img {
+        height: 34px;
+    }
+    .ebay-search-container {
+        border-radius: 8px;
+    }
+    .ebay-search-btn {
+        padding: 0 0.9rem;
+    }
+    .card-image-box {
+        height: 150px;
+    }
+    .card-price-primary {
+        font-size: 1rem;
+    }
+}

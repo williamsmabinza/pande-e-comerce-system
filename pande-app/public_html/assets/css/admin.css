@@ -1,0 +1,61 @@
+/* Admin Management Stylesheet - Pande Computers */
+:root {
+    --admin-navy: #173B70;
+    --admin-deep-navy: #102542;
+    --admin-blue: #2463B4;
+    --admin-bg: #F5F7FA;
+    --admin-border: #E1E6ED;
+    --admin-red: #D62839;
+    --admin-green: #16804A;
+}
+
+.admin-sidebar {
+    background-color: var(--admin-deep-navy);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.admin-nav-link {
+    border-radius: 6px;
+    padding: 0.55rem 0.85rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #cbd5e1 !important;
+    transition: all 0.15s ease;
+}
+
+.admin-nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #ffffff !important;
+}
+
+.admin-nav-link.active {
+    background-color: var(--admin-blue);
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+.admin-body {
+    background-color: var(--admin-bg);
+}
+
+.admin-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--admin-border);
+}
+
+/* Responsive Table Wrapper */
+.admin-table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.admin-stat-card {
+    border: 1px solid var(--admin-border);
+    border-radius: 10px;
+    background: #ffffff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-stat-card:hover {
+    box-shadow: 0 6px 16px rgba(16, 37, 66, 0.06);
+}

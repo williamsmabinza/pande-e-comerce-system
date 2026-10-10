@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="chassisGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <linearGradient id="meshGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <filter id="pcShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <ellipse cx="300" cy="410" rx="180" ry="20" fill="#0f172a" opacity="0.18" />
+
+  <!-- Desktop PC Tower Case (3D Isometric-feel Angle) -->
+  <g filter="url(#pcShadow)">
+    <!-- Tower Main Body -->
+    <rect x="200" y="60" width="200" height="330" rx="12" fill="url(#chassisGrad)" stroke="#334155" stroke-width="2" />
+    
+    <!-- Front Bezel Panel -->
+    <rect x="210" y="70" width="180" height="310" rx="8" fill="#0b1120" stroke="#1e293b" stroke-width="1.5" />
+
+    <!-- Top I/O Panel -->
+    <rect x="225" y="85" width="150" height="26" rx="4" fill="#1e293b" />
+    <!-- Power Button with Ring LED -->
+    <circle cx="245" cy="98" r="6" fill="#38bdf8" />
+    <circle cx="245" cy="98" r="3" fill="#0f172a" />
+    <!-- USB Ports & Audio Jack -->
+    <rect x="268" y="94" width="10" height="8" rx="1" fill="#0284c7" />
+    <rect x="286" y="94" width="10" height="8" rx="1" fill="#0284c7" />
+    <rect x="304" y="94" width="8" height="8" rx="2" fill="#3b82f6" />
+    <circle cx="325" cy="98" r="3" fill="#10b981" />
+    <circle cx="338" cy="98" r="3" fill="#f43f5e" />
+
+    <!-- Front Intake Ventilation Grille / LED Strip -->
+    <rect x="225" y="130" width="150" height="230" rx="6" fill="#030712" stroke="#1e293b" stroke-width="1" />
+    
+    <!-- Internal RGB Fan Glow Elements -->
+    <circle cx="300" cy="190" r="45" fill="none" stroke="url(#meshGrad)" stroke-width="8" opacity="0.85" />
+    <circle cx="300" cy="190" r="18" fill="#38bdf8" opacity="0.4" />
+    
+    <circle cx="300" cy="295" r="45" fill="none" stroke="url(#meshGrad)" stroke-width="8" opacity="0.85" />
+    <circle cx="300" cy="295" r="18" fill="#38bdf8" opacity="0.4" />
+
+    <!-- Mesh Horizontal Louvers -->
+    <g stroke="#1e293b" stroke-width="2" opacity="0.7">
+      <line x1="230" y1="150" x2="370" y2="150" />
+      <line x1="230" y1="170" x2="370" y2="170" />
+      <line x1="230" y1="210" x2="370" y2="210" />
+      <line x1="230" y1="230" x2="370" y2="230" />
+      <line x1="230" y1="260" x2="370" y2="260" />
+      <line x1="230" y1="280" x2="370" y2="280" />
+      <line x1="230" y1="320" x2="370" y2="320" />
+      <line x1="230" y1="340" x2="370" y2="340" />
+    </g>
+
+    <!-- Side Badge -->
+    <text x="300" y="375" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#64748b" text-anchor="middle" letter-spacing="2">PANDE COMPUTERS</text>
+  </g>
+</svg>

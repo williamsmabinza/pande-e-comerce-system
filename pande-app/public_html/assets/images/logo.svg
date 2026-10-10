@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <!-- Background is transparent -->
+  <g fill="none" stroke="#0f172a" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Outer Circle -->
+    <circle cx="250" cy="190" r="130" stroke="#0a192f" stroke-width="22" />
+  </g>
+  <!-- Monogram PC -->
+  <text x="250" y="235" 
+        text-anchor="middle" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" 
+        font-size="140" 
+        font-weight="900" 
+        letter-spacing="-6"
+        fill="#0a192f">PC</text>
+  <!-- Brand Name -->
+  <text x="250" y="380" 
+        text-anchor="middle" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" 
+        font-size="34" 
+        font-weight="900" 
+        letter-spacing="2"
+        fill="#0a192f">PANDE COMPUTERS</text>
+  <!-- Slogan -->
+  <text x="250" y="415" 
+        text-anchor="middle" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" 
+        font-size="14" 
+        font-weight="700" 
+        letter-spacing="4"
+        fill="#1e3a8a">YOUR TRUSTED TECH PARTNER</text>
+</svg>

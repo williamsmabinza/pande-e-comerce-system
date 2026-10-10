@@ -1,0 +1,6 @@
+{
+  "name": "Pande Computers - E-Commerce & Retail Store",
+  "description": "Production e-commerce and retail management system for Pande Computers in Kariakoo, Dar es Salaam. Features genuine electronics catalog, WhatsApp order workflow, inventory tracking, customer portal, and comprehensive admin dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

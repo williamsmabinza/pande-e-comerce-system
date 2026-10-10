@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="routerBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <filter id="netShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.22" />
+    </filter>
+  </defs>
+
+  <ellipse cx="300" cy="390" rx="220" ry="22" fill="#0f172a" opacity="0.15" />
+
+  <g filter="url(#netShadow)">
+    <!-- 4 High-Gain External Antennas -->
+    <!-- Antenna 1 (Far Left Angled) -->
+    <polygon points="120,60 128,60 155,250 145,250" fill="#090d16" stroke="#475569" stroke-width="1" />
+    <circle cx="150" cy="250" r="8" fill="#1e293b" stroke="#64748b" stroke-width="1.5" />
+
+    <!-- Antenna 2 (Inner Left Upright) -->
+    <polygon points="215,40 225,40 230,240 220,240" fill="#090d16" stroke="#475569" stroke-width="1" />
+    <circle cx="225" cy="240" r="8" fill="#1e293b" stroke="#64748b" stroke-width="1.5" />
+
+    <!-- Antenna 3 (Inner Right Upright) -->
+    <polygon points="375,40 385,40 380,240 370,240" fill="#090d16" stroke="#475569" stroke-width="1" />
+    <circle cx="375" cy="240" r="8" fill="#1e293b" stroke="#64748b" stroke-width="1.5" />
+
+    <!-- Antenna 4 (Far Right Angled) -->
+    <polygon points="480,60 472,60 445,250 455,250" fill="#090d16" stroke="#475569" stroke-width="1" />
+    <circle cx="450" cy="250" r="8" fill="#1e293b" stroke="#64748b" stroke-width="1.5" />
+
+    <!-- Aerodynamic Router Chassis -->
+    <polygon points="130,240 470,240 490,320 110,320" fill="url(#routerBody)" stroke="#334155" stroke-width="2" />
+    
+    <!-- Top Geometric Vent Accents (X-Design) -->
+    <polygon points="160,250 440,250 455,305 145,305" fill="#0b1120" stroke="#1e293b" stroke-width="1" />
+    <line x1="200" y1="260" x2="400" y2="295" stroke="#0284c7" stroke-width="2" opacity="0.6" />
+    <line x1="400" y1="260" x2="200" y2="295" stroke="#0284c7" stroke-width="2" opacity="0.6" />
+
+    <!-- Front LED Indicator Bar (Power, Internet, 2.4G, 5G, LAN, WPS) -->
+    <rect x="110" y="320" width="380" height="28" rx="6" fill="#030712" stroke="#1e293b" stroke-width="1.5" />
+    <circle cx="240" cy="334" r="3" fill="#10b981" /> <!-- Pwr -->
+    <circle cx="264" cy="334" r="3" fill="#0284c7" /> <!-- WAN -->
+    <circle cx="288" cy="334" r="3" fill="#0284c7" /> <!-- 2.4G -->
+    <circle cx="312" cy="334" r="3" fill="#0284c7" /> <!-- 5G -->
+    <circle cx="336" cy="334" r="3" fill="#10b981" /> <!-- LAN -->
+    <circle cx="360" cy="334" r="3" fill="#38bdf8" /> <!-- WPS -->
+
+    <!-- Wi-Fi 6 Label -->
+    <text x="300" y="280" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="900" fill="#38bdf8" text-anchor="middle" letter-spacing="2">Wi-Fi 6 GIGABIT</text>
+    <text x="300" y="295" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">AX1800 Dual Band &bull; OFDMA &bull; MU-MIMO</text>
+  </g>
+</svg>

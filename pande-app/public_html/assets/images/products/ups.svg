@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="upsBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <filter id="upsShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <ellipse cx="300" cy="400" rx="190" ry="20" fill="#0f172a" opacity="0.18" />
+
+  <g filter="url(#upsShadow)">
+    <!-- UPS Tower Chassis -->
+    <rect x="180" y="70" width="240" height="310" rx="14" fill="url(#upsBody)" stroke="#334155" stroke-width="2" />
+    
+    <!-- Front Face Plate -->
+    <rect x="195" y="85" width="210" height="280" rx="10" fill="#0b1120" stroke="#1e293b" stroke-width="1.5" />
+
+    <!-- Digital LCD Status Display Screen -->
+    <rect x="220" y="105" width="160" height="80" rx="8" fill="#022c22" stroke="#059669" stroke-width="1.5" />
+    
+    <text x="300" y="130" font-family="-apple-system, BlinkMacSystemFont, monospace" font-size="14" font-weight="900" fill="#34d399" text-anchor="middle">230V AVR OK</text>
+    <text x="300" y="150" font-family="-apple-system, BlinkMacSystemFont, monospace" font-size="11" fill="#6ee7b7" text-anchor="middle">LOAD: 42% | BATT: 100%</text>
+    
+    <!-- Battery Level Bar -->
+    <rect x="250" y="160" width="100" height="12" rx="3" fill="#064e3b" />
+    <rect x="252" y="162" width="96" height="8" rx="2" fill="#10b981" />
+
+    <!-- Power Push Button -->
+    <circle cx="300" cy="225" r="22" fill="#1e293b" stroke="#334155" stroke-width="2" />
+    <circle cx="300" cy="225" r="16" fill="#0f172a" />
+    <!-- Standby / Power Icon -->
+    <path d="M 300 215 L 300 223 M 294 220 A 7 7 0 1 0 306 220" stroke="#10b981" stroke-width="2.5" fill="none" stroke-linecap="round" />
+
+    <!-- Status Indicator LEDs (On Line, On Battery, Overload) -->
+    <circle cx="250" cy="280" r="5" fill="#10b981" /> <!-- Green Online -->
+    <text x="250" y="298" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">ONLINE</text>
+    
+    <circle cx="300" cy="280" r="5" fill="#eab308" /> <!-- Yellow Battery -->
+    <text x="300" y="298" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">ON BATT</text>
+
+    <circle cx="350" cy="280" r="5" fill="#ef4444" /> <!-- Red Fault -->
+    <text x="350" y="298" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">FAULT</text>
+
+    <!-- Rating Stamp -->
+    <text x="300" y="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="900" fill="#f8fafc" text-anchor="middle" letter-spacing="1">650VA / 375W</text>
+    <text x="300" y="355" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" fill="#64748b" text-anchor="middle">SURGE &amp; VOLTAGE REGULATION</text>
+  </g>
+</svg>

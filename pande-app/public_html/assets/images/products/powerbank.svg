@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pbBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <filter id="pbShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.22" />
+    </filter>
+  </defs>
+
+  <ellipse cx="300" cy="390" rx="180" ry="20" fill="#0f172a" opacity="0.16" />
+
+  <g filter="url(#pbShadow)" transform="rotate(-4, 300, 225)">
+    <!-- Portable 20000mAh Power Bank Block -->
+    <rect x="180" y="90" width="240" height="290" rx="20" fill="url(#pbBody)" stroke="#334155" stroke-width="2" />
+    
+    <!-- Matte Textured Finish Subtle Line Grid -->
+    <rect x="190" y="100" width="220" height="270" rx="14" fill="#0b1120" stroke="#1e293b" stroke-width="1" />
+
+    <!-- Top Port Edge (Dual USB-A and USB-C) -->
+    <rect x="205" y="110" width="190" height="40" rx="8" fill="#1e293b" />
+    
+    <!-- USB-A Port 1 (IQ Blue) -->
+    <rect x="220" y="122" width="35" height="16" rx="3" fill="#0284c7" stroke="#38bdf8" stroke-width="1" />
+    <!-- USB-C Port (Bi-directional PD) -->
+    <rect x="280" y="124" width="40" height="12" rx="6" fill="#0f172a" stroke="#64748b" stroke-width="1.5" />
+    <!-- USB-A Port 2 (IQ Blue) -->
+    <rect x="345" y="122" width="35" height="16" rx="3" fill="#0284c7" stroke="#38bdf8" stroke-width="1" />
+
+    <!-- 4 LED Battery Capacity Indicator Wheel -->
+    <circle cx="300" cy="200" r="28" fill="#0f172a" stroke="#1e293b" stroke-width="2" />
+    <circle cx="288" cy="195" r="3" fill="#38bdf8" />
+    <circle cx="300" cy="190" r="3" fill="#38bdf8" />
+    <circle cx="312" cy="195" r="3" fill="#38bdf8" />
+    <circle cx="300" cy="210" r="3" fill="#38bdf8" />
+    <text x="300" y="245" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#38bdf8" text-anchor="middle">100% CHARGED</text>
+
+    <!-- Capacity Typography -->
+    <text x="300" y="300" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle">20,000<tspan font-size="16" fill="#94a3b8">mAh</tspan></text>
+    <text x="300" y="325" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#64748b" text-anchor="middle" letter-spacing="1">HIGH SPEED POWERCORE</text>
+
+    <!-- Side Power Check Button -->
+    <rect x="418" y="180" width="6" height="30" rx="3" fill="#475569" />
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 70" width="100%" height="100%">
+  <!-- Circular Icon -->
+  <circle cx="35" cy="35" r="28" fill="none" stroke="#0a192f" stroke-width="4.5" />
+  <text x="35" y="44" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="900" fill="#0a192f" letter-spacing="-1">PC</text>
+  
+  <!-- Brand Text -->
+  <text x="76" y="36" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="900" fill="#0a192f" letter-spacing="1">PANDE COMPUTERS</text>
+  <text x="78" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#1e3a8a" letter-spacing="2.5">YOUR TRUSTED TECH PARTNER</text>
+</svg>
