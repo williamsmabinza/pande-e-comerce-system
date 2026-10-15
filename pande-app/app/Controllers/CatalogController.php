@@ -92,7 +92,7 @@ class CatalogController extends BaseController {
 
         $this->render('catalog.detail', [
             'pageTitle' => $product['name'] . ' - Pande Computers',
-            'metaDescription' => mb_substr(strip_tags($product['short_description']), 0, 155),
+            'metaDescription' => function_exists('mb_substr') ? mb_substr(strip_tags($product['short_description']), 0, 155) : substr(strip_tags($product['short_description']), 0, 155),
             'product' => $product,
             'relatedProducts' => $related,
         ]);

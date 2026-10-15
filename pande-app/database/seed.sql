@@ -18,27 +18,27 @@ INSERT INTO user_addresses (id, user_id, recipient_name, phone, street_address, 
 (1, 3, 'Juma Mwinyi', '+255755987654', 'Plot 42, Samora Avenue', 'Dar es Salaam', 'Ilala', 'Near Clock Tower', 1);
 
 -- 3. Categories (20 categories requested)
-INSERT INTO categories (id, parent_id, name, slug, description, icon_class, sort_order, is_active) VALUES
-(1, NULL, 'Laptops and Notebooks', 'laptops-and-notebooks', 'Business laptops, ultrabooks, gaming laptops, and mobile workstations.', 'bi-laptop', 1, 1),
-(2, NULL, 'Desktop Computers and All-in-One PCs', 'desktop-computers-and-all-in-one-pcs', 'Powerful desktop towers, compact mini PCs, and sleek all-in-one desktop systems.', 'bi-pc-display', 2, 1),
-(3, NULL, 'Computer Monitors and Displays', 'computer-monitors-and-displays', 'IPS, LED, curved, 4K, and high-refresh-rate gaming monitors from top brands.', 'bi-display', 3, 1),
-(4, NULL, 'Computer Accessories and Peripherals', 'computer-accessories-and-peripherals', 'Keyboards, wireless mice, webcams, mousepads, USB hubs, and laptop stands.', 'bi-mouse', 4, 1),
-(5, NULL, 'Storage Devices, Flash Drives, Memory Cards and SSDs', 'storage-devices-flash-drives-memory-cards-and-ssds', 'High-speed NVMe M.2 SSDs, external hard drives, SD cards, and high-capacity flash drives.', 'bi-hdd', 5, 1),
-(6, NULL, 'RAM, Processors, Motherboards and Computer Components', 'ram-processors-motherboards-and-components', 'DDR4/DDR5 desktop and laptop RAM, Intel/AMD processors, power supplies, and graphics cards.', 'bi-cpu', 6, 1),
-(7, NULL, 'Printers and Multifunction Printers', 'printers-and-multifunction-printers', 'LaserJet, EcoTank, continuous ink tank printers, wireless printers, and receipt printers.', 'bi-printer', 7, 1),
-(8, NULL, 'Printer Toners, Ink Cartridges and Ink Bottles', 'printer-toners-ink-cartridges-and-bottles', 'Original HP laser toners, Epson EcoTank ink bottles, and Canon cartridge replacements.', 'bi-droplet', 8, 1),
-(9, NULL, 'Projectors and Scanners', 'projectors-and-scanners', 'HD office projectors, portable mini projectors, flatbed and document feeding scanners.', 'bi-projector', 9, 1),
-(10, NULL, 'Networking Equipment, Routers and Switches', 'networking-equipment-routers-and-switches', 'Wi-Fi 6 routers, gigabit switches, ethernet cabling, 4G LTE routers, and range extenders.', 'bi-router', 10, 1),
-(11, NULL, 'Mobile Phones and Smartphones', 'mobile-phones-and-smartphones', 'Brand new Android smartphones, iPhones, and reliable feature phones.', 'bi-phone', 11, 1),
-(12, NULL, 'Mobile Accessories and Phone Protection', 'mobile-accessories-and-phone-protection', 'Tempered glass, rugged phone cases, magnetic car mounts, and phone holders.', 'bi-shield-check', 12, 1),
-(13, NULL, 'Chargers, Power Banks, Cables and Adapters', 'chargers-power-banks-cables-and-adapters', 'Fast charging adapters, high-capacity power banks, USB-C braided cables, and OTG adapters.', 'bi-battery-charging', 13, 1),
-(14, NULL, 'Earphones, Headphones, Speakers and Audio', 'earphones-headphones-speakers-and-audio', 'Noise-cancelling wireless headphones, Bluetooth portable speakers, and studio headsets.', 'bi-headphones', 14, 1),
-(15, NULL, 'Smart TVs and Television Accessories', 'smart-tvs-and-television-accessories', '4K Smart UHD TVs, wall mounts, Android TV streaming boxes, and optical cables.', 'bi-tv', 15, 1),
-(16, NULL, 'Gaming Consoles, Controllers and Gaming Accessories', 'gaming-consoles-controllers-and-gaming-accessories', 'PS5 consoles, wireless controllers, gaming headsets, and mechanical keyboards.', 'bi-controller', 16, 1),
-(17, NULL, 'Electrical Components, Cables, Switches and Sockets', 'electrical-components-cables-switches-and-sockets', 'Power extension strips with surge protection, HDMI cables, adapters, and wall sockets.', 'bi-plug', 17, 1),
-(18, NULL, 'Power Protection, UPS Systems and Surge Protectors', 'power-protection-ups-systems-and-surge-protectors', 'Line-interactive UPS battery backups, voltage regulators, and industrial surge protectors.', 'bi-lightning', 18, 1),
-(19, NULL, 'Office Equipment and Supplies', 'office-equipment-and-supplies', 'Paper shredders, laminators, binding machines, and heavy-duty currency counters.', 'bi-briefcase', 19, 1),
-(20, NULL, 'Other Electronics and Technology Products', 'other-electronics-and-technology-products', 'CCTV security cameras, smart home gadgets, barcode scanners, and tools.', 'bi-grid', 20, 1);
+INSERT INTO categories (id, parent_id, name, slug, description, icon_class, image_url, sort_order, is_active) VALUES
+(1, NULL, 'Laptops and Notebooks', 'laptops-and-notebooks', 'Business laptops, ultrabooks, gaming laptops, and mobile workstations.', 'bi-laptop', 'src/assets/images/regenerated_image_1791994723082.png', 1, 1),
+(2, NULL, 'Desktop Computers and All-in-One PCs', 'desktop-computers-and-all-in-one-pcs', 'Powerful desktop towers, compact mini PCs, and sleek all-in-one desktop systems.', 'bi-pc-display', 'src/assets/images/regenerated_image_1791994733345.png', 2, 1),
+(3, NULL, 'Computer Monitors and Displays', 'computer-monitors-and-displays', 'IPS, LED, curved, 4K, and high-refresh-rate gaming monitors from top brands.', 'bi-display', 'assets/images/products/monitor.svg', 3, 1),
+(4, NULL, 'Computer Accessories and Peripherals', 'computer-accessories-and-peripherals', 'Keyboards, wireless mice, webcams, mousepads, USB hubs, and laptop stands.', 'bi-mouse', 'assets/images/products/peripherals.svg', 4, 1),
+(5, NULL, 'Storage Devices, Flash Drives, Memory Cards and SSDs', 'storage-devices-flash-drives-memory-cards-and-ssds', 'High-speed NVMe M.2 SSDs, external hard drives, SD cards, and high-capacity flash drives.', 'bi-hdd', 'assets/images/products/ssd.svg', 5, 1),
+(6, NULL, 'RAM, Processors, Motherboards and Computer Components', 'ram-processors-motherboards-and-components', 'DDR4/DDR5 desktop and laptop RAM, Intel/AMD processors, power supplies, and graphics cards.', 'bi-cpu', 'src/assets/images/regenerated_image_1791994739947.png', 6, 1),
+(7, NULL, 'Printers and Multifunction Printers', 'printers-and-multifunction-printers', 'LaserJet, EcoTank, continuous ink tank printers, wireless printers, and receipt printers.', 'bi-printer', 'src/assets/images/regenerated_image_1791994744798.png', 7, 1),
+(8, NULL, 'Printer Toners, Ink Cartridges and Ink Bottles', 'printer-toners-ink-cartridges-and-bottles', 'Original HP laser toners, Epson EcoTank ink bottles, and Canon cartridge replacements.', 'bi-droplet', 'assets/images/products/printer.svg', 8, 1),
+(9, NULL, 'Projectors and Scanners', 'projectors-and-scanners', 'HD office projectors, portable mini projectors, flatbed and document feeding scanners.', 'bi-projector', 'assets/images/products/monitor.svg', 9, 1),
+(10, NULL, 'Networking Equipment, Routers and Switches', 'networking-equipment-routers-and-switches', 'Wi-Fi 6 routers, gigabit switches, ethernet cabling, 4G LTE routers, and range extenders.', 'bi-router', 'src/assets/images/regenerated_image_1791994747595.png', 10, 1),
+(11, NULL, 'Mobile Phones and Smartphones', 'mobile-phones-and-smartphones', 'Brand new Android smartphones, iPhones, and reliable feature phones.', 'bi-phone', 'assets/images/products/phone.svg', 11, 1),
+(12, NULL, 'Mobile Accessories and Phone Protection', 'mobile-accessories-and-phone-protection', 'Tempered glass, rugged phone cases, magnetic car mounts, and phone holders.', 'bi-shield-check', 'assets/images/products/phone.svg', 12, 1),
+(13, NULL, 'Chargers, Power Banks, Cables and Adapters', 'chargers-power-banks-cables-and-adapters', 'Fast charging adapters, high-capacity power banks, USB-C braided cables, and OTG adapters.', 'bi-battery-charging', 'assets/images/products/ups.svg', 13, 1),
+(14, NULL, 'Earphones, Headphones, Speakers and Audio', 'earphones-headphones-speakers-and-audio', 'Noise-cancelling wireless headphones, Bluetooth portable speakers, and studio headsets.', 'bi-headphones', 'assets/images/products/peripherals.svg', 14, 1),
+(15, NULL, 'Smart TVs and Television Accessories', 'smart-tvs-and-television-accessories', '4K Smart UHD TVs, wall mounts, Android TV streaming boxes, and optical cables.', 'bi-tv', 'assets/images/products/tv.svg', 15, 1),
+(16, NULL, 'Gaming Consoles, Controllers and Gaming Accessories', 'gaming-consoles-controllers-and-gaming-accessories', 'PS5 consoles, wireless controllers, gaming headsets, and mechanical keyboards.', 'bi-controller', 'assets/images/products/peripherals.svg', 16, 1),
+(17, NULL, 'Electrical Components, Cables, Switches and Sockets', 'electrical-components-cables-switches-and-sockets', 'Power extension strips with surge protection, HDMI cables, adapters, and wall sockets.', 'bi-plug', 'assets/images/products/ups.svg', 17, 1),
+(18, NULL, 'Power Protection, UPS Systems and Surge Protectors', 'power-protection-ups-systems-and-surge-protectors', 'Line-interactive UPS battery backups, voltage regulators, and industrial surge protectors.', 'bi-lightning', 'src/assets/images/regenerated_image_1791994749597.jpg', 18, 1),
+(19, NULL, 'Office Equipment and Supplies', 'office-equipment-and-supplies', 'Paper shredders, laminators, binding machines, and heavy-duty currency counters.', 'bi-briefcase', 'assets/images/products/desktop.svg', 19, 1),
+(20, NULL, 'Other Electronics and Technology Products', 'other-electronics-and-technology-products', 'CCTV security cameras, smart home gadgets, barcode scanners, and tools.', 'bi-grid', 'assets/images/products/desktop.svg', 20, 1);
 
 -- 4. Store Settings
 INSERT INTO store_settings (setting_key, setting_value, setting_group, description) VALUES
@@ -57,7 +57,17 @@ INSERT INTO store_settings (setting_key, setting_value, setting_group, descripti
 ('order_prefix', 'PAN-2026-', 'orders', 'Prefix for Order Identifiers'),
 ('allow_guest_checkout', '1', 'orders', 'Allow Customers to Order without Registration'),
 ('stock_deduction_policy', 'on_order', 'inventory', 'Deduct stock upon order creation or confirmation'),
-('low_stock_default', '3', 'inventory', 'Default Alert Threshold for Low Stock');
+('low_stock_default', '3', 'inventory', 'Default Alert Threshold for Low Stock'),
+('hero_badge', 'Authorized Tanzanian IT Retailer', 'homepage', 'Hero badge text'),
+('hero_title_line1', 'YOUR TECH.', 'homepage', 'Hero title line 1'),
+('hero_title_line2', 'YOUR WAY.', 'homepage', 'Hero title line 2'),
+('hero_subtitle', 'Shop laptops, desktops, components and IT essentials online. Genuine computing hardware delivered across Dar es Salaam and nationwide.', 'homepage', 'Hero subtitle text'),
+('hero_btn_primary_text', 'Shop Now', 'homepage', 'Hero primary button text'),
+('hero_btn_primary_url', '/shop', 'homepage', 'Hero primary button URL'),
+('hero_btn_secondary_text', 'Explore Categories', 'homepage', 'Hero secondary button text'),
+('hero_btn_secondary_url', '#browse-categories', 'homepage', 'Hero secondary button URL'),
+('hero_showcase_image', 'src/assets/images/regenerated_image_1791995491732.png', 'homepage', 'Hero showcase image'),
+('hero_bg_image', 'assets/images/hero-tech-bg.svg', 'homepage', 'Hero background image');
 
 -- 5. Products Seed (Realistic Genuine Electronics with real TZS pricing and specs)
 INSERT INTO products (id, category_id, name, slug, sku, model_number, brand, short_description, description, price, compare_at_price, cost_price, stock_quantity, low_stock_threshold, is_featured, is_new_arrival, status, warranty_info, specifications) VALUES

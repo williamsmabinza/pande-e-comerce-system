@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#f8fafc" />
+      <stop offset="80%" stop-color="#f1f5f9" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+
+    <!-- Subtle Radial Glows for Depth -->
+    <radialGradient id="blueGlow" cx="20%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="navyGlow" cx="80%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#173b70" stop-opacity="0.07" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Circuit Pattern Grid -->
+    <pattern id="circuitGrid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#2463b4" stroke-width="0.75" stroke-opacity="0.07" />
+      <circle cx="80" cy="80" r="2" fill="#2463b4" fill-opacity="0.12" />
+      <circle cx="0" cy="0" r="2" fill="#2463b4" fill-opacity="0.12" />
+    </pattern>
+
+    <!-- Soft Filter -->
+    <filter id="softBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="40" />
+    </filter>
+  </defs>
+
+  <!-- Base Clean Studio Wall -->
+  <rect width="1600" height="900" fill="url(#bgGrad)" />
+
+  <!-- Ambient Light Influx -->
+  <rect width="1600" height="900" fill="url(#blueGlow)" />
+  <rect width="1600" height="900" fill="url(#navyGlow)" />
+
+  <!-- Subtle High-Tech Circuit Matrix Overlay -->
+  <rect width="1600" height="900" fill="url(#circuitGrid)" />
+
+  <!-- Abstract Tech Geometry & Data Bus Lines -->
+  <g stroke="#1e3a8a" stroke-width="1.5" stroke-opacity="0.08" fill="none">
+    <!-- Curved PCB Traces -->
+    <path d="M -50 200 L 300 200 L 450 350 L 800 350" />
+    <circle cx="300" cy="200" r="4" fill="#2463b4" fill-opacity="0.15" />
+    <circle cx="450" cy="350" r="4" fill="#2463b4" fill-opacity="0.15" />
+    
+    <path d="M 1200 100 L 1350 250 L 1650 250" />
+    <circle cx="1350" cy="250" r="4" fill="#2463b4" fill-opacity="0.15" />
+
+    <path d="M 100 800 L 350 800 L 500 650 L 900 650" />
+    <circle cx="350" cy="800" r="4" fill="#2463b4" fill-opacity="0.15" />
+
+    <!-- Isometric Tech Hexagons -->
+    <polygon points="1400,600 1460,635 1460,705 1400,740 1340,705 1340,635" stroke="#2463b4" stroke-opacity="0.06" stroke-width="2" />
+    <polygon points="1350,550 1390,573 1390,620 1350,643 1310,620 1310,573" stroke="#2463b4" stroke-opacity="0.05" stroke-width="1.5" />
+    <polygon points="200,450 250,479 250,537 200,566 150,537 150,479" stroke="#173b70" stroke-opacity="0.06" stroke-width="2" />
+  </g>
+
+  <!-- Soft Depth Floating Spheres in Royal Navy & Cyan -->
+  <circle cx="220" cy="180" r="160" fill="#2463b4" opacity="0.03" filter="url(#softBlur)" />
+  <circle cx="1350" cy="720" r="220" fill="#0284c7" opacity="0.04" filter="url(#softBlur)" />
+  <circle cx="850" cy="150" r="180" fill="#173b70" opacity="0.03" filter="url(#softBlur)" />
+</svg>

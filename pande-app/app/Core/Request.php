@@ -37,6 +37,13 @@ class Request {
         return '/' . trim($path, '/');
     }
 
+    public function query(string $key, mixed $default = null): mixed {
+        if (isset($this->get[$key])) {
+            return is_string($this->get[$key]) ? trim($this->get[$key]) : $this->get[$key];
+        }
+        return $default;
+    }
+
     public function input(string $key, mixed $default = null): mixed {
         if (isset($this->post[$key])) {
             return is_string($this->post[$key]) ? trim($this->post[$key]) : $this->post[$key];

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="phoneBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="50%" stop-color="#173b70" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <filter id="phoneShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.22" />
+    </filter>
+  </defs>
+
+  <!-- Ground Shadow -->
+  <ellipse cx="300" cy="410" rx="160" ry="16" fill="#0f172a" opacity="0.18" />
+
+  <g filter="url(#phoneShadow)">
+    <!-- Smartphone Chassis (Titanium Frame) -->
+    <rect x="190" y="45" width="220" height="355" rx="36" fill="url(#phoneBody)" stroke="#64748b" stroke-width="2.5" />
+    <!-- Glass Inner Border -->
+    <rect x="198" y="53" width="204" height="339" rx="30" fill="#000000" />
+    <!-- OLED Display -->
+    <rect x="202" y="57" width="196" height="331" rx="26" fill="url(#screenGrad)" />
+
+    <!-- Dynamic Island / Top Camera Punch Hole -->
+    <rect x="265" y="66" width="70" height="18" rx="9" fill="#000000" />
+    <circle cx="280" cy="75" r="4" fill="#1e293b" />
+    <circle cx="318" cy="75" r="3" fill="#38bdf8" />
+
+    <!-- Wallpaper Abstract Graphics -->
+    <circle cx="270" cy="190" r="60" fill="#38bdf8" opacity="0.35" filter="blur(10px)" />
+    <circle cx="340" cy="250" r="70" fill="#a855f7" opacity="0.35" filter="blur(12px)" />
+
+    <!-- Smartphone UI: Clock & Branding -->
+    <text x="300" y="145" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="34" font-weight="800" fill="#ffffff" text-anchor="middle">09:41</text>
+    <text x="300" y="170" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#93c5fd" text-anchor="middle">5G &bull; Kariakoo, DSM</text>
+
+    <text x="300" y="275" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1">SMARTPHONE 5G</text>
+    <text x="300" y="295" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#bfdbfe" text-anchor="middle">120Hz AMOLED &bull; 256GB</text>
+
+    <!-- Bottom Home Indicator Bar -->
+    <rect x="260" y="375" width="80" height="4" rx="2" fill="#ffffff" opacity="0.8" />
+  </g>
+</svg>

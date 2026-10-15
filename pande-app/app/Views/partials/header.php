@@ -177,15 +177,23 @@
         </div>
     </div>
 
-    <!-- Category Bar (Horizontal eBay Departments) -->
-    <nav class="department-nav-bar d-none d-md-block">
-        <div class="container d-flex align-items-center overflow-x-auto">
-            <a href="<?= APP_URL ?>/shop" class="dept-link fw-bold text-primary">All Products</a>
-            <?php foreach (array_slice($allCategories, 0, 10) as $cat): ?>
-                <a href="<?= APP_URL ?>/category/<?= e($cat['slug']) ?>" class="dept-link">
-                    <?= e($cat['name']) ?>
+    <!-- Category Bar (Horizontal Navigation for Home, Laptops, Desktops, Computer Parts, Printers, Networking, Contact) -->
+    <nav class="department-nav-bar">
+        <div class="container d-flex align-items-center justify-content-between overflow-x-auto text-nowrap py-1">
+            <div class="d-flex align-items-center gap-1 gap-md-2">
+                <a href="<?= APP_URL ?>/" class="dept-link <?= empty($_SERVER['REQUEST_URI']) || $_SERVER['REQUEST_URI'] === '/' || str_starts_with($_SERVER['REQUEST_URI'], '/?#') ? 'active fw-bold' : '' ?>">Home</a>
+                <a href="<?= APP_URL ?>/category/laptops-and-notebooks" class="dept-link <?= str_contains($_SERVER['REQUEST_URI'] ?? '', 'laptops') ? 'active fw-bold' : '' ?>">Laptops</a>
+                <a href="<?= APP_URL ?>/category/desktop-computers-and-all-in-one-pcs" class="dept-link <?= str_contains($_SERVER['REQUEST_URI'] ?? '', 'desktop') ? 'active fw-bold' : '' ?>">Desktops</a>
+                <a href="<?= APP_URL ?>/category/ram-processors-motherboards-and-components" class="dept-link <?= str_contains($_SERVER['REQUEST_URI'] ?? '', 'ram-processors') ? 'active fw-bold' : '' ?>">Computer Parts</a>
+                <a href="<?= APP_URL ?>/category/printers-and-multifunction-printers" class="dept-link <?= str_contains($_SERVER['REQUEST_URI'] ?? '', 'printers') ? 'active fw-bold' : '' ?>">Printers</a>
+                <a href="<?= APP_URL ?>/category/networking-equipment-routers-and-switches" class="dept-link <?= str_contains($_SERVER['REQUEST_URI'] ?? '', 'networking') ? 'active fw-bold' : '' ?>">Networking</a>
+                <a href="<?= APP_URL ?>/contact" class="dept-link <?= str_contains($_SERVER['REQUEST_URI'] ?? '', 'contact') ? 'active fw-bold' : '' ?>">Contact</a>
+            </div>
+            <div class="d-none d-lg-flex align-items-center gap-2 ps-3 border-start">
+                <a href="<?= APP_URL ?>/shop" class="dept-link fw-semibold text-primary">
+                    <span>All Products</span> <i class="bi bi-arrow-right ms-1"></i>
                 </a>
-            <?php endforeach; ?>
+            </div>
         </div>
     </nav>
 </header>

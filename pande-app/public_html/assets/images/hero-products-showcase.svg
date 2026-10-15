@@ -1,0 +1,291 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 700" width="100%" height="100%">
+  <defs>
+    <!-- Studio Lighting Background Glow -->
+    <radialGradient id="stageGlow" cx="50%" cy="65%" r="65%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="45%" stop-color="#f8fafc" stop-opacity="1" />
+      <stop offset="85%" stop-color="#eef2f6" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#e2e8f0" stop-opacity="0.7" />
+    </radialGradient>
+
+    <!-- Sleek Tech Gradients -->
+    <linearGradient id="monScreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a192f" />
+      <stop offset="50%" stop-color="#173b70" />
+      <stop offset="100%" stop-color="#2463b4" />
+    </linearGradient>
+
+    <linearGradient id="laptopLid" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#e2e8f0" />
+      <stop offset="100%" stop-color="#94a3b8" />
+    </linearGradient>
+
+    <linearGradient id="towerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+
+    <linearGradient id="rgbBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+
+    <linearGradient id="goldAcc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+
+    <linearGradient id="prnBodyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="60%" stop-color="#f1f5f9" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+
+    <filter id="softDropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.14" />
+    </filter>
+
+    <filter id="crispShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.12" />
+    </filter>
+
+    <radialGradient id="pedestalShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.22" />
+      <stop offset="60%" stop-color="#0f172a" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Clean Studio Stage Ground -->
+  <rect width="1100" height="700" fill="url(#stageGlow)" rx="16" />
+
+  <!-- Multi-Product Pedestal Shadows on Surface -->
+  <!-- Monitor & Center Shadow -->
+  <ellipse cx="550" cy="530" rx="420" ry="48" fill="url(#pedestalShadow)" />
+  <!-- Laptop Shadow -->
+  <ellipse cx="330" cy="545" rx="190" ry="22" fill="url(#pedestalShadow)" />
+  <!-- Tower Shadow -->
+  <ellipse cx="800" cy="540" rx="160" ry="24" fill="url(#pedestalShadow)" />
+  <!-- Printer Shadow -->
+  <ellipse cx="160" cy="525" rx="140" ry="20" fill="url(#pedestalShadow)" />
+
+  <!-- ============================================================
+       1. BACKGROUND PRODUCT LAYER: 4K ULTRA-WIDE MONITOR (CENTER)
+       ============================================================ -->
+  <g filter="url(#softDropShadow)">
+    <!-- Stand Neck & Base -->
+    <path d="M 525 360 L 575 360 L 565 480 L 535 480 Z" fill="#94a3b8" stroke="#64748b" stroke-width="1.5" />
+    <ellipse cx="550" cy="485" rx="100" ry="16" fill="#cbd5e1" stroke="#64748b" stroke-width="2" />
+    <ellipse cx="550" cy="482" rx="85" ry="12" fill="#f8fafc" />
+
+    <!-- Monitor Bezel Frame -->
+    <rect x="330" y="80" width="440" height="280" rx="12" fill="#090d16" stroke="#475569" stroke-width="2.5" />
+    <!-- Screen Edge-to-Edge Display -->
+    <rect x="338" y="88" width="424" height="254" rx="6" fill="url(#monScreen)" />
+
+    <!-- Screen Graphic: Pande Tech Dashboard / High-Fi Visual -->
+    <circle cx="440" cy="190" r="80" fill="#38bdf8" opacity="0.3" />
+    <circle cx="640" cy="220" r="90" fill="#6366f1" opacity="0.25" />
+    <path d="M 338 270 Q 450 180 550 250 T 762 190 L 762 342 L 338 342 Z" fill="#ffffff" opacity="0.1" />
+
+    <!-- Screen Typography / Branding -->
+    <rect x="420" y="145" width="260" height="85" rx="8" fill="#090d16" opacity="0.45" />
+    <text x="550" y="180" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">PANDE COMPUTERS</text>
+    <text x="550" y="205" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#38bdf8" text-anchor="middle" letter-spacing="1.5">PREMIUM HARDWARE &bull; DAR ES SALAAM</text>
+    
+    <!-- Monitor Chin with Power LED -->
+    <rect x="330" y="342" width="440" height="18" fill="#1e293b" rx="2" />
+    <circle cx="550" cy="351" r="2.5" fill="#e2e8f0" />
+    <circle cx="740" cy="351" r="2" fill="#38bdf8" />
+  </g>
+
+  <!-- ============================================================
+       2. RIGHT PRODUCT LAYER: HIGH-PERFORMANCE DESKTOP TOWER & RAM
+       ============================================================ -->
+  <g filter="url(#softDropShadow)">
+    <!-- Tower Body -->
+    <rect x="730" y="170" width="180" height="340" rx="14" fill="url(#towerGrad)" stroke="#334155" stroke-width="2.5" />
+    <!-- Front Panel -->
+    <rect x="740" y="180" width="160" height="320" rx="10" fill="#0b1120" stroke="#1e293b" stroke-width="1.5" />
+    <!-- Top I/O Port Panel -->
+    <rect x="755" y="195" width="130" height="26" rx="4" fill="#1e293b" />
+    <circle cx="770" cy="208" r="5" fill="#38bdf8" />
+    <circle cx="770" cy="208" r="2.5" fill="#090d16" />
+    <rect x="790" y="204" width="8" height="8" rx="1" fill="#0284c7" />
+    <rect x="805" y="204" width="8" height="8" rx="1" fill="#0284c7" />
+    <rect x="822" y="204" width="8" height="8" rx="1" fill="#2563eb" />
+    <circle cx="842" cy="208" r="3" fill="#10b981" />
+
+    <!-- RGB Dual Intake Fans -->
+    <rect x="755" y="235" width="130" height="245" rx="8" fill="#030712" stroke="#1e293b" stroke-width="1" />
+    <circle cx="820" cy="295" r="44" fill="none" stroke="url(#rgbBlue)" stroke-width="8" opacity="0.95" />
+    <circle cx="820" cy="295" r="16" fill="#38bdf8" opacity="0.4" />
+    <circle cx="820" cy="405" r="44" fill="none" stroke="url(#rgbBlue)" stroke-width="8" opacity="0.95" />
+    <circle cx="820" cy="405" r="16" fill="#38bdf8" opacity="0.4" />
+    <!-- Grill Slits -->
+    <g stroke="#1e293b" stroke-width="2">
+      <line x1="765" y1="250" x2="875" y2="250" />
+      <line x1="765" y1="345" x2="875" y2="345" />
+      <line x1="765" y1="460" x2="875" y2="460" />
+    </g>
+
+    <!-- Glass Side Reflection Accent -->
+    <polygon points="885,190 905,190 905,490 885,490" fill="#38bdf8" opacity="0.08" />
+  </g>
+
+  <!-- ============================================================
+       3. LEFT PRODUCT LAYER: ALL-IN-ONE PRINTER & NETWORKING ROUTER
+       ============================================================ -->
+  <!-- EcoTank Printer -->
+  <g filter="url(#softDropShadow)">
+    <!-- Main Body -->
+    <rect x="70" y="290" width="220" height="170" rx="14" fill="url(#prnBodyGrad)" stroke="#94a3b8" stroke-width="2" />
+    <!-- Top Scanner Lid -->
+    <rect x="78" y="275" width="204" height="24" rx="6" fill="#334155" stroke="#1e293b" stroke-width="1.5" />
+    <rect x="155" y="282" width="50" height="5" rx="2" fill="#64748b" />
+
+    <!-- Color Touchscreen Panel -->
+    <rect x="88" y="310" width="60" height="38" rx="5" fill="#0f172a" />
+    <rect x="92" y="314" width="38" height="30" rx="3" fill="#0284c7" />
+    <circle cx="138" cy="329" r="4" fill="#10b981" />
+
+    <!-- EcoTank Front Windows (Black, Cyan, Magenta, Yellow) -->
+    <rect x="235" y="315" width="45" height="55" rx="5" fill="#0f172a" />
+    <rect x="239" y="322" width="7" height="42" rx="2" fill="#020617" />
+    <rect x="249" y="322" width="7" height="42" rx="2" fill="#06b6d4" />
+    <rect x="259" y="322" width="7" height="42" rx="2" fill="#ec4899" />
+    <rect x="269" y="322" width="7" height="42" rx="2" fill="#eab308" />
+
+    <!-- Paper Tray Slot & Sheet -->
+    <rect x="88" y="375" width="140" height="20" rx="4" fill="#0f172a" />
+    <polygon points="100,380 216,380 210,435 106,435" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <line x1="115" y1="395" x2="200" y2="395" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="115" y1="407" x2="185" y2="407" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" />
+    <line x1="115" y1="418" x2="165" y2="418" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <!-- Wi-Fi 6 Gigabit Router with Antennas (Overlapping Printer) -->
+  <g filter="url(#crispShadow)">
+    <!-- 4 High-Gain Antennas -->
+    <polygon points="100,170 106,170 115,320 108,320" fill="#090d16" stroke="#475569" stroke-width="1" />
+    <polygon points="145,150 152,150 155,310 148,310" fill="#090d16" stroke="#475569" stroke-width="1" />
+    <polygon points="215,150 222,150 219,310 212,310" fill="#090d16" stroke="#475569" stroke-width="1" />
+    <polygon points="265,170 259,170 250,320 256,320" fill="#090d16" stroke="#475569" stroke-width="1" />
+
+    <!-- Router Body -->
+    <polygon points="110,315 260,315 275,365 95,365" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+    <!-- Front LED Strip -->
+    <rect x="95" y="365" width="180" height="16" rx="4" fill="#030712" stroke="#1e293b" stroke-width="1" />
+    <circle cx="150" cy="373" r="2.5" fill="#10b981" />
+    <circle cx="165" cy="373" r="2.5" fill="#0284c7" />
+    <circle cx="180" cy="373" r="2.5" fill="#0284c7" />
+    <circle cx="195" cy="373" r="2.5" fill="#38bdf8" />
+    <circle cx="210" cy="373" r="2.5" fill="#10b981" />
+  </g>
+
+  <!-- ============================================================
+       4. CENTER FOREGROUND: PREMIUM ULTRABOOK LAPTOP
+       ============================================================ -->
+  <g filter="url(#softDropShadow)">
+    <!-- Upright Display Lid -->
+    <rect x="235" y="240" width="310" height="200" rx="10" fill="url(#laptopLid)" stroke="#64748b" stroke-width="1.5" />
+    <rect x="242" y="247" width="296" height="184" rx="6" fill="#090d16" />
+    <!-- Webcam -->
+    <circle cx="390" cy="252" r="2" fill="#38bdf8" />
+
+    <!-- Glossy Laptop Screen -->
+    <rect x="248" y="258" width="284" height="164" rx="4" fill="url(#monScreen)" />
+    <!-- Screen Wallpaper -->
+    <circle cx="330" cy="330" r="45" fill="#60a5fa" opacity="0.3" />
+    <circle cx="450" cy="310" r="50" fill="#38bdf8" opacity="0.25" />
+    <text x="390" y="335" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1">CORE i7 / 16GB / 512GB SSD</text>
+    <text x="390" y="352" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="600" fill="#93c5fd" text-anchor="middle">Windows 11 Pro Genuine</text>
+
+    <!-- OS Dock / Taskbar -->
+    <rect x="248" y="408" width="284" height="14" fill="#090d16" opacity="0.8" />
+    <rect x="375" y="412" width="6" height="6" rx="1" fill="#38bdf8" />
+    <rect x="385" y="412" width="6" height="6" rx="1" fill="#60a5fa" />
+    <rect x="395" y="412" width="6" height="6" rx="1" fill="#93c5fd" />
+
+    <!-- Perspective Laptop Base Keyboard Deck -->
+    <polygon points="180,515 590,515 550,440 220,440" fill="url(#laptopLid)" stroke="#64748b" stroke-width="1.5" />
+    <!-- Front Edge -->
+    <rect x="180" y="515" width="410" height="10" rx="3" fill="#94a3b8" />
+    <rect x="365" y="516" width="50" height="3" rx="1.5" fill="#64748b" />
+
+    <!-- Keyboard Well -->
+    <polygon points="240,490 530,490 515,450 255,450" fill="#090d16" opacity="0.85" rx="3" />
+    <!-- Trackpad -->
+    <rect x="345" y="493" width="90" height="18" rx="3" fill="#cbd5e1" stroke="#94a3b8" stroke-width="0.8" />
+  </g>
+
+  <!-- ============================================================
+       5. FRONT FOREGROUND COMPONENTS: GRAPHICS CARD, NVMe SSD & RAM
+       ============================================================ -->
+  <!-- Dedicated GPU / Graphics Card (Right Lower Foreground) -->
+  <g filter="url(#crispShadow)">
+    <polygon points="630,470 780,450 780,530 630,550" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+    <!-- Dual Cooling Fans on Shroud -->
+    <circle cx="675" cy="505" r="24" fill="#090d16" stroke="#38bdf8" stroke-width="2" />
+    <circle cx="675" cy="505" r="8" fill="#38bdf8" opacity="0.6" />
+    <circle cx="735" cy="495" r="24" fill="#090d16" stroke="#38bdf8" stroke-width="2" />
+    <circle cx="735" cy="495" r="8" fill="#38bdf8" opacity="0.6" />
+    <!-- Gold PCIe Slot Connector Edge -->
+    <polygon points="630,550 750,534 750,542 630,558" fill="url(#goldAcc)" />
+    <!-- Geforce / Gaming Badge -->
+    <rect x="650" y="465" width="60" height="10" rx="2" fill="#10b981" />
+    <text x="680" y="473" font-family="-apple-system, BlinkMacSystemFont, monospace" font-size="7" font-weight="900" fill="#ffffff" text-anchor="middle">RTX 4060 Ti</text>
+  </g>
+
+  <!-- High-Speed M.2 NVMe SSD (Front Center Left Foreground) -->
+  <g filter="url(#crispShadow)" transform="rotate(-8, 480, 560)">
+    <rect x="420" y="550" width="130" height="42" rx="4" fill="#022c22" stroke="#10b981" stroke-width="1" />
+    <!-- Gold Contact Fingers -->
+    <rect x="416" y="554" width="4" height="34" rx="1" fill="url(#goldAcc)" />
+    <!-- NAND Chips & Label -->
+    <rect x="430" y="554" width="22" height="34" rx="2" fill="#090d16" />
+    <rect x="456" y="554" width="22" height="34" rx="2" fill="#090d16" />
+    <!-- Label -->
+    <rect x="484" y="554" width="60" height="34" rx="2" fill="#0f172a" stroke="#ca8a04" stroke-width="1" />
+    <text x="514" y="567" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8" font-weight="900" fill="#fef08a" text-anchor="middle">1TB NVMe</text>
+    <text x="514" y="580" font-family="-apple-system, BlinkMacSystemFont, monospace" font-size="6.5" font-weight="700" fill="#ffffff" text-anchor="middle">3,500 MB/s</text>
+  </g>
+
+  <!-- DDR4/DDR5 Desktop Gaming RAM Stick (Front Center Foreground) -->
+  <g filter="url(#crispShadow)" transform="rotate(12, 330, 560)">
+    <!-- Aluminum Heat Spreader (Midnight Blue & Silver) -->
+    <rect x="250" y="555" width="160" height="36" rx="4" fill="#173b70" stroke="#38bdf8" stroke-width="1.2" />
+    <!-- Top RGB Light Bar Diffuser -->
+    <rect x="252" y="556" width="156" height="6" rx="2" fill="#38bdf8" opacity="0.9" />
+    <!-- Gold Edge Connectors -->
+    <rect x="252" y="588" width="156" height="5" rx="1" fill="url(#goldAcc)" />
+    <!-- Notch -->
+    <rect x="330" y="587" width="6" height="7" fill="#f8fafc" />
+    <!-- Label -->
+    <text x="330" y="575" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1">16GB DDR4 3200MHz</text>
+  </g>
+
+  <!-- ============================================================
+       6. SURROUNDING TRUST BADGES & QUALITY STAMP
+       ============================================================ -->
+  <!-- Floating Quality Stamp Pill -->
+  <g filter="url(#crispShadow)">
+    <rect x="850" y="100" width="210" height="64" rx="32" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" />
+    <circle cx="882" cy="132" r="20" fill="#16804a" />
+    <path d="M 874 132 L 879 137 L 891 125" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="912" y="126" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="900" fill="#15191f">100% GENUINE</text>
+    <text x="912" y="144" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#64748b">Original Sealed Hardware</text>
+  </g>
+
+  <!-- Floating Fast Delivery Badge -->
+  <g filter="url(#crispShadow)">
+    <rect x="40" y="90" width="220" height="64" rx="32" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" />
+    <circle cx="72" cy="122" r="20" fill="#2463b4" />
+    <!-- Location Pin / Truck Icon Mockup -->
+    <path d="M 72 110 C 67 110 63 114 63 119 C 63 126 72 134 72 134 C 72 134 81 126 81 119 C 81 114 77 110 72 110 Z" fill="#ffffff" />
+    <circle cx="72" cy="119" r="3" fill="#2463b4" />
+    <text x="102" y="116" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="900" fill="#15191f">KARIAKOO SHOWROOM</text>
+    <text x="102" y="134" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#64748b">Dar es Salaam &amp; Upcountry</text>
+  </g>
+</svg>

@@ -50,6 +50,16 @@ class AuthController extends BaseController {
             return;
         }
 
+        $db = Database::getInstance();
+        $userCheck = $db->prepare("SELECT status FROM users WHERE LOWER(email) = :e LIMIT 1");
+        $userCheck->execute(['e' => strtolower(trim((string)$email))]);
+        $uStatus = $userCheck->fetchColumn();
+        if ($uStatus === 'suspended' || $uStatus === 'inactive') {
+            Session::flash('error', 'Your customer account has been suspended. Please contact customer care at Pande Computers (+255 787 311 342) for assistance.');
+            $this->redirect(APP_URL . '/login');
+            return;
+        }
+
         Session::flash('error', 'Invalid email address or password.');
         $this->redirect(APP_URL . '/login');
     }
@@ -66,9 +76,19 @@ class AuthController extends BaseController {
     }
 
     public function adminLogin(Request $request): void {
-        $validator = new Validator($request->all(), [
+        $rawEmail = strtolower(trim((string)$request->input('email', '')));
+        if ($rawEmail === 'admin' || $rawEmail === 'administrator') {
+            $rawEmail = 'admin@pandecomputers.co.tz';
+        } elseif ($rawEmail === 'staff') {
+            $rawEmail = 'staff@pandecomputers.co.tz';
+        }
+
+        $validator = new Validator([
+            'email' => $rawEmail,
+            'password' => $request->input('password'),
+        ], [
             'email' => 'required|email',
-            'password' => 'required|min:6',
+            'password' => 'required|min:4',
         ]);
 
         if ($validator->fails()) {
@@ -77,8 +97,8 @@ class AuthController extends BaseController {
             return;
         }
 
-        $email = $request->input('email');
-        $password = $request->input('password');
+        $email = $rawEmail;
+        $password = (string)$request->input('password');
 
         if (Auth::attempt($email, $password)) {
             if (Auth::isAdmin() || Auth::isStaff()) {

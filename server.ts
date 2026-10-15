@@ -1,12 +1,12 @@
 import express from 'express';
 import http from 'http';
-import { spawn } from 'child_process';
+import { spawn, execSync, ChildProcess } from 'child_process';
 import path from 'path';
 import fs from 'fs';
 
 const app = express();
 const PORT = 3000;
-const PHP_PORT = 8080;
+const PHP_PORT = 8088;
 
 // Trust reverse proxy (Cloud Run SSL termination)
 app.set('trust proxy', true);
@@ -34,40 +34,86 @@ app.use((req, res, next) => {
 const pandeAppPublicDir = path.resolve(process.cwd(), 'pande-app/public_html');
 const routerScript = path.resolve(pandeAppPublicDir, 'index.php');
 
-console.log('[Server] Starting PHP built-in server on 127.0.0.1:' + PHP_PORT);
-console.log('[Server] Document root:', pandeAppPublicDir);
-
-// Spawn PHP built-in server with router script
-const phpProcess = spawn('php', [
-  '-S', `127.0.0.1:${PHP_PORT}`,
-  '-t', pandeAppPublicDir,
-  routerScript
-], {
-  cwd: path.resolve(process.cwd(), 'pande-app'),
-  env: {
-    ...process.env,
-    APP_ENV: 'development',
-    APP_DEBUG: '1',
-    DB_CONNECTION: 'sqlite',
-    APP_URL: '',
+function ensurePhpInstalled() {
+  try {
+    execSync('which php', { stdio: 'ignore' });
+    console.log('[Server] PHP is available.');
+  } catch {
+    console.log('[Server] PHP not found in environment. Automatically installing PHP runtime...');
+    try {
+      execSync('DEBIAN_FRONTEND=noninteractive apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" php-cli php-sqlite3 php-mbstring php-curl php-xml', { stdio: 'inherit' });
+      console.log('[Server] PHP runtime installed successfully.');
+    } catch (e) {
+      console.error('[Server] Failed to auto-install PHP:', e);
+    }
   }
+}
+
+let phpProcess: ChildProcess | null = null;
+let isShuttingDown = false;
+
+function startPhpServer() {
+  if (isShuttingDown) return;
+  ensurePhpInstalled();
+
+  console.log('[Server] Starting PHP built-in server on 127.0.0.1:' + PHP_PORT);
+  console.log('[Server] Document root:', pandeAppPublicDir);
+
+  phpProcess = spawn('php', [
+    '-S', `127.0.0.1:${PHP_PORT}`,
+    '-t', pandeAppPublicDir,
+    routerScript
+  ], {
+    cwd: path.resolve(process.cwd(), 'pande-app'),
+    env: {
+      ...process.env,
+      APP_ENV: 'development',
+      APP_DEBUG: '1',
+      DB_CONNECTION: 'sqlite',
+      APP_URL: '',
+    }
+  });
+
+  phpProcess.stdout?.on('data', (data: Buffer) => {
+    console.log(`[PHP] ${data.toString().trim()}`);
+  });
+
+  phpProcess.stderr?.on('data', (data: Buffer) => {
+    console.error(`[PHP Log] ${data.toString().trim()}`);
+  });
+
+  phpProcess.on('error', (err: Error) => {
+    console.error('[PHP Process Error]', err);
+    if (!isShuttingDown) {
+      setTimeout(startPhpServer, 2000);
+    }
+  });
+
+  phpProcess.on('close', (code: number | null) => {
+    console.log(`[PHP Process exited with code ${code}]`);
+    if (!isShuttingDown) {
+      setTimeout(startPhpServer, 1000);
+    }
+  });
+}
+
+// Start PHP server
+startPhpServer();
+
+process.on('SIGINT', () => {
+  isShuttingDown = true;
+  if (phpProcess) phpProcess.kill();
+  process.exit(0);
 });
 
-phpProcess.stdout.on('data', (data) => {
-  console.log(`[PHP] ${data.toString().trim()}`);
+process.on('SIGTERM', () => {
+  isShuttingDown = true;
+  if (phpProcess) phpProcess.kill();
+  process.exit(0);
 });
 
-phpProcess.stderr.on('data', (data) => {
-  console.error(`[PHP Log] ${data.toString().trim()}`);
-});
-
-phpProcess.on('error', (err) => {
-  console.error('[PHP Process Error]', err);
-});
-
-phpProcess.on('close', (code) => {
-  console.log(`[PHP Process exited with code ${code}]`);
-});
+// Serve static assets from src/ (for regenerated media and developer assets)
+app.use('/src', express.static(path.resolve(process.cwd(), 'src')));
 
 // Download endpoint for cPanel ZIP archive
 app.get('/download-cpanel-zip', (req, res) => {
@@ -127,6 +173,16 @@ app.use((req, res) => {
         }
         return cookie;
       });
+    }
+
+    // Rewrite Location header to keep redirects relative
+    if (headers['location'] && typeof headers['location'] === 'string') {
+      headers['location'] = headers['location']
+        .replace(/^https?:\/\/127\.0\.0\.1:\d+/i, '')
+        .replace(/^https?:\/\/[^\/]+/i, '');
+      if (!headers['location'].startsWith('/')) {
+        headers['location'] = '/' + headers['location'];
+      }
     }
 
     res.writeHead(proxyRes.statusCode || 200, headers);

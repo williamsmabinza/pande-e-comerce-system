@@ -15,9 +15,19 @@
                 </p>
                 <div class="d-flex flex-column gap-2 small text-white-50">
                     <div><i class="bi bi-geo-alt-fill text-warning me-2"></i> <?= e($storeLocation ?? 'Ndanda & Aggrey Street, Kariakoo, Dar es Salaam, Tanzania') ?></div>
+                    <div><i class="bi bi-globe2 text-warning me-2"></i> <a href="https://pandecomputers.co.tz" target="_blank" rel="noopener" class="text-white-50 text-decoration-none hover-white">www.pandecomputers.co.tz</a></div>
                     <div><i class="bi bi-telephone-fill text-warning me-2"></i> <?= e($storePhone ?? '+255 787 311 342') ?></div>
-                    <div><i class="bi bi-whatsapp text-success me-2"></i> WhatsApp: +255 787 311 342</div>
+                    <div><i class="bi bi-whatsapp text-success me-2"></i> WhatsApp: <a href="https://wa.me/<?= e($storeWhatsApp ?? '255787311342') ?>" target="_blank" rel="noopener" class="text-white-50 text-decoration-none hover-white">+255 787 311 342</a></div>
                     <div><i class="bi bi-envelope-fill text-warning me-2"></i> <?= e($storeEmail ?? 'sales@pandecomputers.co.tz') ?></div>
+                </div>
+                <!-- Social Media Links -->
+                <div class="d-flex align-items-center gap-2 mt-3 pt-2">
+                    <span class="small text-white-50 me-1">Connect:</span>
+                    <a href="https://facebook.com/pandecomputers" target="_blank" rel="noopener" class="btn btn-sm btn-outline-light rounded-circle p-0 d-inline-flex align-items-center justify-content-center" style="width: 32px; height: 32px;" title="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="https://instagram.com/pandecomputers" target="_blank" rel="noopener" class="btn btn-sm btn-outline-light rounded-circle p-0 d-inline-flex align-items-center justify-content-center" style="width: 32px; height: 32px;" title="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="https://twitter.com/pandecomputers" target="_blank" rel="noopener" class="btn btn-sm btn-outline-light rounded-circle p-0 d-inline-flex align-items-center justify-content-center" style="width: 32px; height: 32px;" title="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://linkedin.com/company/pandecomputers" target="_blank" rel="noopener" class="btn btn-sm btn-outline-light rounded-circle p-0 d-inline-flex align-items-center justify-content-center" style="width: 32px; height: 32px;" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://wa.me/<?= e($storeWhatsApp ?? '255787311342') ?>" target="_blank" rel="noopener" class="btn btn-sm btn-outline-success rounded-circle p-0 d-inline-flex align-items-center justify-content-center" style="width: 32px; height: 32px;" title="WhatsApp Direct"><i class="bi bi-whatsapp"></i></a>
                 </div>
             </div>
 
@@ -70,19 +80,61 @@
 
         <hr class="border-secondary opacity-25 my-4">
 
+        <!-- Prominent Admin Portal & Staff Access Tab Bar in Footer -->
+        <div class="bg-black bg-opacity-40 border border-secondary border-opacity-25 rounded-3 p-3 mb-4 shadow-sm">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="bg-warning text-dark p-2 rounded-circle fs-5 d-flex align-items-center justify-content-center" style="width: 42px; height: 42px;">
+                        <i class="bi bi-shield-lock-fill"></i>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="badge bg-warning text-dark fw-bold text-uppercase" style="font-size: 0.65rem; letter-spacing: 0.5px;">Admin & Staff Portal</span>
+                            <span class="text-white-50 small">&bull; Kariakoo Store Operations &bull; Live Control Hub</span>
+                        </div>
+                        <div class="small text-white-50 mt-1">
+                            Authorized personnel only: Product SKUs, Inventory Restocking, Order Verification & System Configuration.
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap align-items-center gap-2">
+                    <?php if (\App\Core\Auth::isStaff()): ?>
+                        <div class="btn-group">
+                            <a href="<?= APP_URL ?>/admin" class="btn btn-warning text-dark fw-bold px-3 py-2 shadow-sm text-decoration-none d-flex align-items-center gap-2">
+                                <i class="bi bi-speedometer2"></i>
+                                <span>Admin Dashboard</span>
+                                <span class="badge bg-dark text-warning ms-1"><?= e(\App\Core\Auth::name()) ?></span>
+                            </a>
+                            <a href="<?= APP_URL ?>/admin/orders" class="btn btn-dark border-secondary px-3 py-2 text-decoration-none small text-white-50" title="Manage Orders">
+                                <i class="bi bi-receipt me-1"></i> Orders
+                            </a>
+                            <a href="<?= APP_URL ?>/admin/inventory" class="btn btn-dark border-secondary px-3 py-2 text-decoration-none small text-white-50" title="Inventory">
+                                <i class="bi bi-boxes me-1"></i> Stock
+                            </a>
+                        </div>
+                    <?php else: ?>
+                        <a href="<?= APP_URL ?>/admin/login" class="btn btn-warning text-dark fw-bold px-4 py-2 rounded-pill shadow text-decoration-none d-flex align-items-center gap-2" id="footerAdminLoginTab">
+                            <i class="bi bi-key-fill"></i>
+                            <span>Admin Login Tab</span>
+                            <span class="badge bg-navy text-white ms-1 font-monospace" style="font-size: 0.7rem;">Staff Console &rarr;</span>
+                        </a>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+
         <div class="row align-items-center small text-white-50 gy-2">
             <div class="col-md-5 text-center text-md-start">
                 &copy; <?= date('Y') ?> <strong>Pande Computers</strong>. All rights reserved. Kariakoo, Dar es Salaam, Tanzania.
             </div>
             <div class="col-md-4 text-center">
-                <!-- Admin & Staff Portal Tab in Footer -->
                 <?php if (\App\Core\Auth::isStaff()): ?>
-                    <a href="<?= APP_URL ?>/admin" class="btn btn-sm btn-warning text-dark fw-bold px-3 py-1 rounded-pill shadow-sm text-decoration-none">
-                        <i class="bi bi-speedometer2 me-1"></i> Admin Dashboard (<?= e(\App\Core\Auth::name()) ?>)
+                    <a href="<?= APP_URL ?>/admin" class="text-warning text-decoration-none fw-semibold">
+                        <i class="bi bi-check-circle-fill text-success me-1"></i> Logged in as <?= e(\App\Core\Auth::role()) ?> (<?= e(\App\Core\Auth::name()) ?>)
                     </a>
                 <?php else: ?>
-                    <a href="<?= APP_URL ?>/admin/login" class="btn btn-sm btn-outline-secondary text-white-50 px-3 py-1 rounded-pill hover-white text-decoration-none border-opacity-50">
-                        <i class="bi bi-shield-lock-fill text-warning me-1"></i> Admin & Staff Login Tab
+                    <a href="<?= APP_URL ?>/admin/login" class="text-white-50 text-decoration-none hover-white">
+                        <i class="bi bi-shield-lock me-1"></i> Staff Sign-In Portal (admin@pandecomputers.co.tz)
                     </a>
                 <?php endif; ?>
             </div>

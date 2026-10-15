@@ -28,7 +28,12 @@
     </button>
 </form>
 
-<div class="text-center small border-top pt-3">
+<div class="text-center small border-top pt-3 mb-2">
+    <a href="<?= APP_URL ?>/admin/login" class="btn btn-outline-dark btn-sm w-100 fw-semibold">
+        <i class="bi bi-shield-lock-fill text-warning me-1"></i> Go to Staff &amp; Administrator Login &rarr;
+    </a>
+</div>
+<div class="text-center small pt-1">
     <span class="text-muted">Don't have an account yet?</span>
     <a href="<?= APP_URL ?>/register" class="fw-bold text-primary text-decoration-none ms-1">Create Account</a>
 </div>

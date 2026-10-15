@@ -60,6 +60,7 @@ class Category extends BaseModel {
                 slug = :slug,
                 description = :description,
                 icon_class = :icon_class,
+                image_url = :image_url,
                 sort_order = :sort_order,
                 is_active = :is_active
             WHERE id = :id
@@ -71,6 +72,7 @@ class Category extends BaseModel {
             'slug' => $data['slug'],
             'description' => $data['description'] ?? null,
             'icon_class' => $data['icon_class'] ?? 'bi-cpu',
+            'image_url' => array_key_exists('image_url', $data) ? $data['image_url'] : null,
             'sort_order' => (int)($data['sort_order'] ?? 0),
             'is_active' => isset($data['is_active']) ? (int)$data['is_active'] : 1
         ]);

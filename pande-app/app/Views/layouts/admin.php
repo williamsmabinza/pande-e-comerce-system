@@ -26,8 +26,8 @@
 
             <!-- Navigation Links -->
             <nav class="nav flex-column p-3 gap-1 flex-grow-1">
-                <a href="<?= APP_URL ?>/admin" class="nav-link admin-nav-link text-white-50 <?= str_ends_with($_SERVER['REQUEST_URI'] ?? '', '/admin') ? 'active' : '' ?>">
-                    <i class="bi bi-speedometer2 me-2"></i> Dashboard Overview
+                <a href="<?= APP_URL ?>/admin" class="nav-link admin-nav-link text-white-50 <?= in_array(parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH), ['/admin', '/admin/', '/admin/dashboard'], true) ? 'active' : '' ?>">
+                    <i class="bi bi-speedometer2 me-2"></i> Overview
                 </a>
                 
                 <div class="text-uppercase text-secondary fw-bold small mt-3 mb-1 px-3" style="font-size: 0.7rem;">Catalog & Stock</div>
@@ -44,6 +44,9 @@
                 <div class="text-uppercase text-secondary fw-bold small mt-3 mb-1 px-3" style="font-size: 0.7rem;">Fulfillment & Sales</div>
                 <a href="<?= APP_URL ?>/admin/orders" class="nav-link admin-nav-link text-white-50 <?= str_contains($_SERVER['REQUEST_URI'] ?? '', '/admin/orders') ? 'active' : '' ?>">
                     <i class="bi bi-receipt me-2"></i> Orders & WhatsApp
+                </a>
+                <a href="<?= APP_URL ?>/admin/customers" class="nav-link admin-nav-link text-white-50 <?= str_contains($_SERVER['REQUEST_URI'] ?? '', '/admin/customers') ? 'active' : '' ?>">
+                    <i class="bi bi-people me-2"></i> Customer Accounts
                 </a>
                 <a href="<?= APP_URL ?>/admin/reports" class="nav-link admin-nav-link text-white-50 <?= str_contains($_SERVER['REQUEST_URI'] ?? '', '/admin/reports') ? 'active' : '' ?>">
                     <i class="bi bi-graph-up-arrow me-2"></i> Reports & Analytics
@@ -119,6 +122,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="<?= asset('assets/js/admin.js') ?>"></script>
 </body>
 </html>

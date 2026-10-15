@@ -62,6 +62,7 @@ require_once dirname(__DIR__) . '/app/Controllers/Admin/InventoryController.php'
 require_once dirname(__DIR__) . '/app/Controllers/Admin/ReportController.php';
 require_once dirname(__DIR__) . '/app/Controllers/Admin/SettingsController.php';
 require_once dirname(__DIR__) . '/app/Controllers/Admin/StaffController.php';
+require_once dirname(__DIR__) . '/app/Controllers/Admin/CustomerManagementController.php';
 
 use App\Core\Request;
 use App\Core\Router;
@@ -122,11 +123,15 @@ Router::post('/admin/login', [App\Controllers\AuthController::class, 'adminLogin
 
 // Admin Dashboard & Operations
 Router::get('/admin', [App\Controllers\Admin\AdminController::class, 'index']);
+Router::get('/admin/dashboard', [App\Controllers\Admin\AdminController::class, 'index']);
 Router::post('/admin/quick-order-status', [App\Controllers\Admin\AdminController::class, 'quickOrderStatus']);
 Router::post('/admin/quick-verify-payment', [App\Controllers\Admin\AdminController::class, 'quickVerifyPayment']);
 Router::post('/admin/quick-stock-adjust', [App\Controllers\Admin\AdminController::class, 'quickStockAdjust']);
 Router::post('/admin/quick-price-update', [App\Controllers\Admin\AdminController::class, 'quickPriceUpdate']);
 Router::post('/admin/quick-announcement', [App\Controllers\Admin\AdminController::class, 'quickAnnouncement']);
+Router::post('/admin/quick-hero-settings', [App\Controllers\Admin\AdminController::class, 'quickHeroSettings']);
+Router::post('/admin/update-hero-content', [App\Controllers\Admin\AdminController::class, 'quickHeroSettings']);
+Router::post('/admin/upload-hero-image', [App\Controllers\Admin\AdminController::class, 'uploadHeroImage']);
 Router::post('/admin/backup-database', [App\Controllers\Admin\AdminController::class, 'backupDatabase']);
 Router::post('/admin/clear-cache', [App\Controllers\Admin\AdminController::class, 'clearCache']);
 Router::get('/admin/products', [App\Controllers\Admin\ProductController::class, 'index']);
@@ -134,6 +139,9 @@ Router::get('/admin/products/create', [App\Controllers\Admin\ProductController::
 Router::post('/admin/products/store', [App\Controllers\Admin\ProductController::class, 'store']);
 Router::get('/admin/products/edit/{id}', [App\Controllers\Admin\ProductController::class, 'edit']);
 Router::post('/admin/products/update/{id}', [App\Controllers\Admin\ProductController::class, 'update']);
+Router::post('/admin/products/delete/{id}', [App\Controllers\Admin\ProductController::class, 'delete']);
+Router::post('/admin/products/status/{id}', [App\Controllers\Admin\ProductController::class, 'updateStatus']);
+Router::post('/admin/products/bulk', [App\Controllers\Admin\ProductController::class, 'bulkAction']);
 
 Router::get('/admin/categories', [App\Controllers\Admin\CategoryController::class, 'index']);
 Router::post('/admin/categories/store', [App\Controllers\Admin\CategoryController::class, 'store']);
@@ -148,6 +156,7 @@ Router::get('/admin/orders/invoice/{id}', [App\Controllers\Admin\OrderController
 
 Router::get('/admin/inventory', [App\Controllers\Admin\InventoryController::class, 'index']);
 Router::post('/admin/inventory/adjust', [App\Controllers\Admin\InventoryController::class, 'adjust']);
+Router::post('/admin/inventory/threshold', [App\Controllers\Admin\InventoryController::class, 'updateThreshold']);
 
 Router::get('/admin/reports', [App\Controllers\Admin\ReportController::class, 'index']);
 Router::get('/admin/reports/export-orders', [App\Controllers\Admin\ReportController::class, 'exportOrders']);
@@ -158,6 +167,14 @@ Router::post('/admin/settings/update', [App\Controllers\Admin\SettingsController
 Router::get('/admin/users', [App\Controllers\Admin\StaffController::class, 'index']);
 Router::post('/admin/users/create-staff', [App\Controllers\Admin\StaffController::class, 'createStaff']);
 Router::post('/admin/users/toggle/{id}', [App\Controllers\Admin\StaffController::class, 'toggleStatus']);
+
+// Admin Customer Accounts Management
+Router::get('/admin/customers', [App\Controllers\Admin\CustomerManagementController::class, 'index']);
+Router::get('/admin/customers/detail/{id}', [App\Controllers\Admin\CustomerManagementController::class, 'detail']);
+Router::post('/admin/customers/store', [App\Controllers\Admin\CustomerManagementController::class, 'store']);
+Router::post('/admin/customers/update/{id}', [App\Controllers\Admin\CustomerManagementController::class, 'update']);
+Router::post('/admin/customers/toggle-status/{id}', [App\Controllers\Admin\CustomerManagementController::class, 'toggleStatus']);
+Router::post('/admin/customers/delete/{id}', [App\Controllers\Admin\CustomerManagementController::class, 'delete']);
 
 // Static Informational Pages
 Router::get('/about', [App\Controllers\PageController::class, 'about']);

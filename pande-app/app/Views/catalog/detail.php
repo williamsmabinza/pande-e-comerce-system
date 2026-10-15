@@ -26,6 +26,7 @@
                          class="img-fluid main-detail-img"
                          style="max-height: 300px; max-width: 90%; object-fit: contain;"
                          onerror="this.src='<?= asset('assets/images/products/laptop.svg') ?>'">
+                    <span class="product-watermark"><i class="bi bi-shield-check"></i> Pande Computers &bull; Kariakoo</span>
                 </div>
                 <div class="d-flex align-items-center justify-content-center gap-2 mt-3 text-muted small">
                     <i class="bi bi-shield-check text-success"></i> Genuine device verified at Kariakoo showroom.
@@ -184,6 +185,7 @@
                                      loading="lazy" 
                                      class="product-thumb-img"
                                      onerror="this.src='<?= asset('assets/images/products/laptop.svg') ?>'">
+                                <span class="product-watermark"><i class="bi bi-shield-check"></i> Pande Computers</span>
                             </a>
                             <div class="card-content-box">
                                 <a href="<?= APP_URL ?>/product/<?= e($rel['slug']) ?>" class="card-product-title">

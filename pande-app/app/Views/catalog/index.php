@@ -135,6 +135,7 @@
                                          loading="lazy" 
                                          class="product-thumb-img"
                                          onerror="this.src='<?= asset('assets/images/products/laptop.svg') ?>'">
+                                    <span class="product-watermark"><i class="bi bi-shield-check"></i> Pande Computers</span>
                                 </a>
 
                                 <div class="card-content-box">

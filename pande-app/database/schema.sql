@@ -18,6 +18,7 @@ CREATE TABLE users (
     phone VARCHAR(50) NOT NULL,
     password_hash VARCHAR(255) NOT NULL,
     status ENUM('active', 'inactive', 'suspended') NOT NULL DEFAULT 'active',
+    avatar VARCHAR(255) NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     INDEX idx_user_email (email),

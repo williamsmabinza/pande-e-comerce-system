@@ -45,15 +45,23 @@
         <button type="button" class="btn btn-outline-dark btn-sm text-start d-flex justify-content-between align-items-center" onclick="fillAdmin('admin@pandecomputers.co.tz', 'AdminSecure2026!')">
             <div>
                 <div class="fw-bold small text-dark"><i class="bi bi-shield-fill-check text-primary me-1"></i> System Administrator</div>
-                <div class="text-muted" style="font-size: 0.75rem;">admin@pandecomputers.co.tz</div>
+                <div class="text-muted" style="font-size: 0.75rem;">admin@pandecomputers.co.tz &bull; Password: <code>AdminSecure2026!</code></div>
             </div>
             <span class="badge bg-primary">Auto Fill &rarr;</span>
+        </button>
+
+        <button type="button" class="btn btn-outline-dark btn-sm text-start d-flex justify-content-between align-items-center" onclick="fillAdmin('williamsmabinza@gmail.com', 'AdminSecure2026!')">
+            <div>
+                <div class="fw-bold small text-dark"><i class="bi bi-person-check-fill text-success me-1"></i> Williams Mabinza (Admin)</div>
+                <div class="text-muted" style="font-size: 0.75rem;">williamsmabinza@gmail.com &bull; Password: <code>AdminSecure2026!</code></div>
+            </div>
+            <span class="badge bg-success">Auto Fill &rarr;</span>
         </button>
 
         <button type="button" class="btn btn-outline-dark btn-sm text-start d-flex justify-content-between align-items-center" onclick="fillAdmin('staff@pandecomputers.co.tz', 'StaffPass2026!')">
             <div>
                 <div class="fw-bold small text-dark"><i class="bi bi-person-badge text-info me-1"></i> Store Staff Officer</div>
-                <div class="text-muted" style="font-size: 0.75rem;">staff@pandecomputers.co.tz</div>
+                <div class="text-muted" style="font-size: 0.75rem;">staff@pandecomputers.co.tz &bull; Password: <code>StaffPass2026!</code></div>
             </div>
             <span class="badge bg-secondary">Auto Fill &rarr;</span>
         </button>

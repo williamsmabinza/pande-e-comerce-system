@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tvScreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="40%" stop-color="#0f172a" />
+      <stop offset="70%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+    <linearGradient id="tvBezel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <filter id="tvShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.22" />
+    </filter>
+  </defs>
+
+  <!-- Ground Shadow -->
+  <ellipse cx="300" cy="415" rx="240" ry="16" fill="#0f172a" opacity="0.18" />
+
+  <!-- TV Feet Legs (Left & Right V-Stands) -->
+  <polygon points="120,380 145,380 160,412 110,412" fill="#0f172a" stroke="#475569" stroke-width="1.5" />
+  <polygon points="480,380 455,380 440,412 490,412" fill="#0f172a" stroke="#475569" stroke-width="1.5" />
+
+  <g filter="url(#tvShadow)">
+    <!-- Thin Frame Outer Bezel -->
+    <rect x="50" y="50" width="500" height="330" rx="10" fill="url(#tvBezel)" stroke="#64748b" stroke-width="2" />
+    <!-- Ultra-Narrow Glass Border -->
+    <rect x="56" y="56" width="488" height="318" rx="6" fill="#000000" />
+    <!-- Vibrant 4K QLED / OLED Screen Display -->
+    <rect x="60" y="60" width="480" height="306" rx="4" fill="url(#tvScreen)" />
+
+    <!-- Cinematic Landscape Graphic on Screen -->
+    <circle cx="160" cy="150" r="90" fill="#38bdf8" opacity="0.35" filter="blur(16px)" />
+    <circle cx="420" cy="180" r="110" fill="#ec4899" opacity="0.3" filter="blur(20px)" />
+    <path d="M 60 260 Q 200 130 330 240 T 540 180 L 540 366 L 60 366 Z" fill="#6366f1" opacity="0.35" />
+
+    <!-- On-Screen Smart TV Badging & Apps -->
+    <text x="300" y="160" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">55" 4K ULTRA HD</text>
+    <text x="300" y="190" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#38bdf8" text-anchor="middle" letter-spacing="1">SMART GOOGLE TV &bull; HDR10+ &bull; DOLBY AUDIO</text>
+
+    <!-- App Dock Bar -->
+    <rect x="180" y="290" width="240" height="36" rx="18" fill="#090d16" opacity="0.75" />
+    <circle cx="215" cy="308" r="10" fill="#ef4444" />
+    <circle cx="245" cy="308" r="10" fill="#0284c7" />
+    <circle cx="275" cy="308" r="10" fill="#10b981" />
+    <circle cx="305" cy="308" r="10" fill="#f59e0b" />
+    <circle cx="335" cy="308" r="10" fill="#8b5cf6" />
+    <circle cx="365" cy="308" r="10" fill="#06b6d4" />
+
+    <!-- Bottom Center Brand Logo / Power LED -->
+    <rect x="285" y="374" width="30" height="6" rx="2" fill="#1e293b" />
+    <circle cx="300" cy="377" r="1.5" fill="#38bdf8" />
+  </g>
+</svg>
